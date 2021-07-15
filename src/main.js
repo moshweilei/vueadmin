@@ -9,9 +9,10 @@ import './permission'
 import 'element-ui/lib/theme-chalk/base.css';
 // collapse 展开折叠
 import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
-
+import store from './store/index'
 Vue.component(CollapseTransition.name, CollapseTransition)
-
+import Fragment from 'vue-fragment'
+Vue.use(Fragment.Plugin)
 import * as echarts from 'echarts'
 Vue.prototype.$echarts = echarts
 import less from 'less'
@@ -24,6 +25,7 @@ Vue.prototype.$http= axios
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

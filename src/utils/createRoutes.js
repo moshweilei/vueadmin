@@ -5,12 +5,12 @@ export default function createRoutes(data) {
     const result = []
     const children = []
     result.push({
-        path: '/',
+        path: '/Index',
         component: () => import('../pages/index/index.vue'),
         children,
     })
-
     data.forEach(item => {
+      console.log(item,"?1?")
         generateRoutes(children, item)
     })
     console.log(result,children,"result")
@@ -23,10 +23,10 @@ export default function createRoutes(data) {
 // 递归遍历数组
 function generateRoutes(children, item) {
     if (item.name) {
-      console.log(item.name,"100")
-        if (asyncRoutes[item.name]) children.push(asyncRoutes[item.name])
+      console.log(item.name,'单个')
+      if (asyncRoutes[item.name]) children.push(asyncRoutes[item.name])
     } else if (item.children) {
-      console.log(item.children,"200")
+      console.log(item.children,"多个")
         item.children.forEach(e => {
             generateRoutes(children, e)
         })

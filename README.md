@@ -1,6 +1,6 @@
 # value-master
 
-> A Vue.js project
+> vue2.x elementui  后台管理系统demo
 
 ## Build Setup
 

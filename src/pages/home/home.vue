@@ -1,18 +1,24 @@
 <template>
   <div>
-    two
+    首页
   </div>
 </template>
 <script>
 export default {
-  name: 'Two',
   data () {
     return {
-
     }
   },
+  created () {
 
+
+  },
+  computed: {
+  },
+  methods: {
+
+  },
 }
 </script>
-<style scoped>
+<style lang="less" scoped>
 </style>
